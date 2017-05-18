@@ -1,4 +1,4 @@
-package com.asterisk.web;
+package com.asterisk.core.web;
 
 import org.springframework.http.MediaType;
 import org.springframework.integration.dsl.channel.MessageChannels;

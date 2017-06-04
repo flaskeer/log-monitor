@@ -58,6 +58,13 @@
             <artifactId>akka-typed_2.11</artifactId>
             <version>${akka.version}</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.scala-lang.modules</groupId>
+            <artifactId>scala-java8-compat_2.11</artifactId>
+            <version>0.8.0</version>
+        </dependency>
+
     </dependencies>
 
 

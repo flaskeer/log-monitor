@@ -21,7 +21,7 @@ public class Client {
     private final ActorSelection remoteDb;
 
     public Client(String remoteAddress) {
-        this.remoteDb = system.actorSelection("akka.tcp://akkadb@" + remoteAddress + "/user/akkadb");
+        this.remoteDb = system.actorSelection("akka.tcp://logAkka@" + remoteAddress + "/user/akka-db");
     }
 
     public CompletionStage set(String key,Object value) {

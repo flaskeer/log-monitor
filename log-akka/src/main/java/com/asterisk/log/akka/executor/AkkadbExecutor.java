@@ -13,7 +13,7 @@ import com.asterisk.log.akka.actor.AkkaDb;
 public class AkkadbExecutor {
 
     public static void main(String[] args) {
-        ActorSystem system = ActorSystem.create("akkadb");
+        ActorSystem system = ActorSystem.create("logAkka");
         ActorRef actorRef = system.actorOf(Props.create(AkkaDb.class), "akka-db");
     }
 }

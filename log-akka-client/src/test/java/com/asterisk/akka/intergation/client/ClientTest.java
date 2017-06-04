@@ -18,7 +18,7 @@ public class ClientTest {
     public void test_remote() {
         Client client = new Client("127.0.0.1:2552");
         client.set("123",123);
-        Integer result = (Integer) ((CompletableFuture) client.get("123")).get();
-        Assert.assertEquals(result,Integer.valueOf(123));
+        String result = (String) ((CompletableFuture) client.get("123")).get();
+        Assert.assertEquals(result,String.valueOf(123));
     }
 }

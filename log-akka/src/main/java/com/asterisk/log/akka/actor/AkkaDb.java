@@ -32,7 +32,7 @@ public class AkkaDb extends AbstractActor {
         })
                 .match(GetRequest.class,message -> {
                     log.info("Received Get request:{}",message);
-                    String value = (String) map.get(message.getKey());
+                    String value = String.valueOf(map.get(message.getKey()));
                     Object response = (value != null) ? value : new Status.Failure(new KeyNotFoundException(message.getKey()));
                     sender().tell(response,self());
                 })
